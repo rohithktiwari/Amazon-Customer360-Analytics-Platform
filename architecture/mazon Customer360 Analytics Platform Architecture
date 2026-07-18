@@ -1,0 +1,29 @@
+                           🚀 Amazon Customer360 Analytics Platform
+
+                                        Source Data
+ ┌──────────────┐  ┌────────────────┐  ┌──────────────┐  ┌─────────────────┐  ┌──────────────┐
+ │ 👤 CRM       │  │ 🛒 Transactions│  │ 📦 Products  │  │ 🎫 Support      │  │ 📢 Marketing │
+ │ Customer Data│  │ Purchase Data  │  │ Catalog Data │  │ Tickets         │  │ Campaigns    │
+ └──────┬───────┘  └──────┬─────────┘  └──────┬───────┘  └──────┬──────────┘  └──────┬───────┘
+         └───────────────────────┬────────────────────────────────────────────┘
+                                 │
+                                 ▼
+                 ☁️ Azure Data Lake Storage Gen2 (Raw CSV Files)
+                                 │
+                                 ▼
+                    ⚡ Azure Databricks (PySpark ETL Processing)
+                                 │
+        ┌────────────────────────┼────────────────────────┐
+        ▼                        ▼                        ▼
+ 🥉 Bronze Layer           🥈 Silver Layer          🥇 Gold Layer
+ Raw Data Storage          Cleaned &               Customer360
+                           Transformed Data        Analytics Dataset
+                                                        │
+                                                        ▼
+                                          👥 Customer360 Unified View
+                                                        │
+                                                        ▼
+                                   🔄 Azure Data Factory Pipeline
+                                                        │
+                                                        ▼
+                               📊 Business Analytics & Reporting
